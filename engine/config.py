@@ -64,6 +64,10 @@ class EngineSettings(BaseSettings):
     captcha_2captcha_api_key: str | None = None
 
     # AdsPower (future)
+    adspower_api_url: str = "http://local.adspower.net:50325"
+    adspower_group_id: str | None = None
+
+    # AdsPower (future)
     adspower_api_url: str | None = None
 
 
