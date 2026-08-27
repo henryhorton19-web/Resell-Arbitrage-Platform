@@ -1,6 +1,6 @@
 # SCOPE — hard constraints
 
-PART D of the build plan, reproduced because `ROADMAP.md` and `AGENTS.md` reference
+PART D of the build plan, reproduced because `docs/ROADMAP.md` and `AGENTS.md` reference
 it. These are operational constraints, not preferences: each one changes whether the
 code works or whether it is licensed to run.
 

@@ -6,8 +6,8 @@ Personal reselling tool. Vinted buy-side, eBay sell-side, one ledger.
 Vinted listing → what's it worth on eBay? → buy → list well → price right → sold → ledger
 ```
 
-**Status: Step 0 (scaffold) complete.** Steps 1–4 not started. See `SPEC.md` for the
-current module contract and `CONTEXT.md` for standing policy.
+**Status: Step 0 (scaffold) complete.** Steps 1–4 not started. See `docs/SPEC.md` for the
+current module contract and `docs/POLICY.md` for standing policy.
 
 ---
 

@@ -2,7 +2,7 @@
 
 **M1 buyside 95%. M2 sellside: all buildable items done. M3 books: complete. M4: sweep, monitors and AutoBuy rails done; execution deliberately blocked.
 M5: reconciliation and Vinted SellVenue done.**
-Updated 20 Aug 2026. This file is the contract; `CONTEXT.md` is the standing policy.
+Updated 20 Aug 2026. This file is the contract; `docs/POLICY.md` is the standing policy.
 
 ---
 
@@ -74,7 +74,7 @@ verified locally including migrate-from-empty and `uv lock --check`.
 Each of these is a deliberate choice, not drift. Reverse any of them freely, but know what it costs.
 
 **`CompSource` is a separate protocol, not a `SellVenue` method.**
-Part B.2 lists `SellVenue.sold_comps`, but the venue-roles table in `CONTEXT.md` names `CompSource` as its own role. SoldComps and Apify are comp sources that are not sell venues at all, so folding the two together would mean the comps-overflow provider could not be swapped without touching publishing.
+Part B.2 lists `SellVenue.sold_comps`, but the venue-roles table in `docs/POLICY.md` names `CompSource` as its own role. SoldComps and Apify are comp sources that are not sell venues at all, so folding the two together would mean the comps-overflow provider could not be swapped without touching publishing.
 
 **`vinted_ref` table added beyond the Part B.4 DDL.**
 Step 0 requires loading the Vinted ID tables and B.4 gives them no home. Single table keyed `(kind, external_id)` rather than five tables, because the access pattern is identical for all of them and five tables is five migrations later.
@@ -120,7 +120,7 @@ These came from inspecting the actual payloads before writing against them. They
 
 ## 6. Step 1 handoff — write these before implementing
 
-Step 1 is the valuation engine. Per `CONTEXT.md`, the loop is spec and failing tests first, then one agent request per module, with *"do not modify tests"* in the prompt.
+Step 1 is the valuation engine. Per `docs/POLICY.md`, the loop is spec and failing tests first, then one agent request per module, with *"do not modify tests"* in the prompt.
 
 ### Contracts to implement
 
@@ -227,7 +227,7 @@ policy question for the quality filter, not a representability question for a mo
 
 ## 10. What remains
 
-See `ROADMAP.md` for the full plan. Nothing waits on data: every gap runs on a
+See `docs/ROADMAP.md` for the full plan. Nothing waits on data: every gap runs on a
 declared placeholder tracked in the roadmap's placeholder register.
 
 Immediately open in W1, and both need an external input this codebase cannot

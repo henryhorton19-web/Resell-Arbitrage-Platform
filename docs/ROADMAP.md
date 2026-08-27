@@ -63,7 +63,7 @@ rather than discovering that six weeks of margins were fiction.
 are still provisional, how many realised sales and real decisions exist, which velocity
 policy is active, and which `fee_table_version`s scored the existing book. Resolution
 closes a placeholder only on positive evidence; "nothing to check" reports `unknown`
-rather than passing. See `SPEC.md` §13.
+rather than passing. See `docs/SPEC.md` §13.
 
 ---
 
