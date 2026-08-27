@@ -1,6 +1,10 @@
-# arb
+# arbitrage-bot
 
 Personal reselling tool. Vinted buy-side, eBay sell-side, one ledger.
+
+[![ci](https://github.com/henryhorton19-web/arbitrage-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/henryhorton19-web/arbitrage-bot/actions/workflows/ci.yml)
+[![licence](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
+[![python](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)
 
 ```
 Vinted listing → what's it worth on eBay? → buy → list well → price right → sold → ledger
@@ -105,3 +109,40 @@ publishes but is not indexed looks like success and sells nothing.
 
 **Request pacing.** Vinted polling defaults to 1.5 req/s and is capped at 2.0 in
 `Settings`. Hard constraints are in `docs/SCOPE.md`.
+
+## Terms of service
+
+Automated access to Vinted and eBay is against those platforms' terms. The exposure is the
+account, so keep any account used here separate from anything you cannot afford to lose.
+Every engine capability is feature-flagged via `ARB_ENGINE_*` settings and defaults to
+disabled. No credentials, accounts, proxies, CAPTCHA balances or session state ship with this
+repository, and none are committed to its history.
+
+## Integrations
+
+| Service | Used for |
+|---|---|
+| Vinted | buy-side listing discovery |
+| eBay (via `ebay_rest`) | sell-side listing and sold comps |
+| sold-comps | comparable sale prices |
+| Apify | scraping infrastructure |
+| Anthropic API | listing normalisation and titling |
+| CapSolver | CAPTCHA solving, opt-in and off by default |
+| AdsPower | browser profile isolation, opt-in and off by default |
+
+## Reference data
+
+`tests/fixtures/vinted_ref/` holds real public platform reference rows (brand, catalog,
+colour, country, size, status IDs). They are retained deliberately: `src/arb/refdata.py`
+maps IDs to titles and `tests/test_refdata.py` asserts on the values, so substituting them
+would break normalisation. They are advisory lookups, never a brand allowlist.
+
+## What is not in this repo
+
+No API keys, no `.env`, no `ebay_rest.json`, no database, no ledger. Copy `.env.example` and
+`ebay_rest.json.example` and fill them in locally. `uv run arb doctor` reports what is
+configured and what is missing; missing keys make a step unavailable, not broken.
+
+## Licence
+
+MIT — see [LICENSE](LICENSE).
