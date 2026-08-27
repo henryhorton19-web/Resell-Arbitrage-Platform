@@ -1,5 +1,5 @@
 [project]
-name = "arb"
+name = "resell-arbitrage-platform"
 version = "0.1.0"
 description = "Personal reselling tool: Vinted buy-side, eBay sell-side, one ledger."
 requires-python = ">=3.12"
