@@ -1,8 +1,8 @@
-# arbitrage-bot
+# Resell-Arbitrage-Platform
 
 Personal reselling tool. Vinted buy-side, eBay sell-side, one ledger.
 
-[![ci](https://github.com/henryhorton19-web/arbitrage-bot/actions/workflows/ci.yml/badge.svg)](https://github.com/henryhorton19-web/arbitrage-bot/actions/workflows/ci.yml)
+[![ci](https://github.com/henryhorton19-web/Resell-Arbitrage-Platform/actions/workflows/ci.yml/badge.svg)](https://github.com/henryhorton19-web/Resell-Arbitrage-Platform/actions/workflows/ci.yml)
 [![licence](https://img.shields.io/badge/licence-MIT-blue.svg)](LICENSE)
 [![python](https://img.shields.io/badge/python-3.12-blue.svg)](https://www.python.org/)
 
