@@ -30,7 +30,7 @@ jobs:
       - name: Install uv
         # setup-uv stopped publishing moving tags at v8.0.0 (March 2026): @v8, @v9 and
         # @v10 do not resolve. Only full-version tags or SHAs work.
-        uses: astral-sh/setup-uv@20cfd1bf945f4377ade1205e4dbc17946fc9a30d # v10.0.1
+        uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
         with:
           enable-cache: true
 
